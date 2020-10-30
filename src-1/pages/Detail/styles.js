@@ -62,7 +62,7 @@ export default StyleSheet.create({
     },
 
     action: {
-        backgroundColor: '#488A57',
+        backgroundColor: '#E02041',
         borderRadius: 8,
         height: 50,
         width: '48%',

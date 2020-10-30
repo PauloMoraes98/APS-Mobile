@@ -43,13 +43,9 @@ export default function Routes() {
         <NavigationContainer>
             <AppStack.Navigator screenOptions={{ headerShown: false }}>
                 <AppStack.Screen name="Main" component={Main} />
-                <AppStack.Screen name="Logon" component={Logon} />
-                <AppStack.Screen name="NewIncident" component={NewIncident} />
-                <AppStack.Screen name="Profile" component={Profile} />
-                <AppStack.Screen name="Register" component={Register} />
-                <AppStack.Screen name="Incidents" component={Incidents} />
-                <AppStack.Screen name="Detail" component={Detail} />
-           </AppStack.Navigator>
+                <AppStack.Screen name="OngPages" component={OngRoutes} />
+                <AppStack.Screen name="UserPages" component={UserRoutes} />
+            </AppStack.Navigator>
         </NavigationContainer>
     );
 }

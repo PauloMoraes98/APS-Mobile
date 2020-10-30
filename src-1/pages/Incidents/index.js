@@ -46,7 +46,7 @@ export default function Incidents() {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                {/* <Image source={logoImg} /> */}
+                <Image source={logoImg} />
                 <Text style={styles.headerText}>
                     Total de <Text style={styles.headerTextBold}> {total} </Text> casos.
                 </Text>
@@ -66,17 +66,19 @@ export default function Incidents() {
                         <Text style={styles.incidentProperty}>ONG: </Text>
                         <Text style={styles.incidentValue}>{incident.name}</Text>
 
-                        <Text style={styles.incidentProperty}>REPORT: </Text>
+                        <Text style={styles.incidentProperty}>CASO: </Text>
                         <Text style={styles.incidentValue}>{ incident.title }</Text>
 
-                        <Text style={styles.incidentProperty}>ENDEREÇO: </Text>
-                        <Text style={styles.incidentValue}>{ incident.adress }</Text>
+                        <Text style={styles.incidentProperty}>VALOR: </Text>
+                        <Text style={styles.incidentValue}>
+                            { Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(incident.value) }
+                        </Text>
                         <TouchableOpacity 
                             style={styles.detailsButton} 
                             onPress={() => navigateToDetail(incident)}
                         >
                         <Text style={styles.detailsButtonText}>Ver mais detalhes</Text>
-                        <Feather name="arrow-right" size={16} color="#488A57" />
+                        <Feather name="arrow-right" size={16} color="#E02041" />
                         </TouchableOpacity>
                     </View>
                 )}

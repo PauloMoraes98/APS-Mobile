@@ -34,7 +34,7 @@ export default function Detail() {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                {/* <Image source={logoImg} /> */}
+                <Image source={logoImg} />
                 
                 <TouchableOpacity onPress = {navigateBack}>
                     <Feather name="arrow-left" size={28} color="#488A57" />
@@ -45,11 +45,13 @@ export default function Detail() {
                 <Text style={[styles.incidentProperty, {marginTop: 0}]}>ONG: </Text>
                 <Text style={styles.incidentValue}>{incident.name} de {incident.city}/{incident.uf}</Text>
 
-                <Text style={styles.incidentProperty}>REPORT: </Text>
+                <Text style={styles.incidentProperty}>CASO: </Text>
                 <Text style={styles.incidentValue}>{incident.description}</Text>
 
-                <Text style={styles.incidentProperty}>REPORT: </Text>
-                <Text style={styles.incidentValue}>{incident.adress}</Text>
+                <Text style={styles.incidentProperty}>VALOR: </Text>
+                <Text style={styles.incidentValue}>
+                    { Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(incident.value) }
+                </Text>
             </View>
 
             <View style={styles.contactBox}>
